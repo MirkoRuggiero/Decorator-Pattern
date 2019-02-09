@@ -1,19 +1,19 @@
 package patterns.behavioural.observer;
 
-import patterns.behavioural.observer.observers.Observer1;
-import patterns.behavioural.observer.observers.Observer2;
-import patterns.behavioural.observer.subjects.Subject;
+import patterns.behavioural.observer.observers.NormalSubscriber;
+import patterns.behavioural.observer.observers.PremiumSubscriber;
+import patterns.behavioural.observer.subjects.IndexTrackingWebsite;
 
 public class ObserverTest {
     public static void main(String[] args) {
-        Subject subject = new Subject();
+        IndexTrackingWebsite indexTrackingWebsite = new IndexTrackingWebsite();
 
-        subject.attach(new Observer1(subject));
-        subject.attach(new Observer2(subject));
+        indexTrackingWebsite.attach(new NormalSubscriber(indexTrackingWebsite));
+        indexTrackingWebsite.attach(new PremiumSubscriber(indexTrackingWebsite));
 
-        System.out.println("First state change: 15");
-        subject.setState(15);
-        System.out.println("Second state change: 10");
-        subject.setState(10);
+        System.out.println("First index change: 15");
+        indexTrackingWebsite.setIndex(15);
+        System.out.println("Second index change: 10");
+        indexTrackingWebsite.setIndex(10);
     }
 }
