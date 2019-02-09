@@ -7,6 +7,13 @@
     <groupId>DecoratorPattern</groupId>
     <artifactId>DecoratorPattern</artifactId>
     <version>1.0</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>1.10</maven.compiler.source>
