@@ -17,7 +17,7 @@ public class AdapterTest {
         //adaptee objects
         calcolaStipendi.aggiungiImpiegato(new ImpiegatiAdapter(new ConsulenteManager("Project1")));
         calcolaStipendi.aggiungiImpiegato(new ImpiegatiAdapter(new ConsulenteSviluppatore()));
-        
+
         calcolaStipendi.calcola();
     }
 }
