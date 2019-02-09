@@ -1,25 +1,23 @@
 package patterns.structural.adapter.client;
 
-import patterns.structural.adapter.adaptee.Rhombus;
-import patterns.structural.adapter.adaptee.Triangle;
-import patterns.structural.adapter.adapter.GeometricShapeObjectAdapter;
-import patterns.structural.adapter.target.objects.Circle;
-import patterns.structural.adapter.target.objects.Drawing;
-import patterns.structural.adapter.target.objects.Rectangle;
+import patterns.structural.adapter.adaptee.ConsulenteSviluppatore;
+import patterns.structural.adapter.adaptee.ConsulenteManager;
+import patterns.structural.adapter.adapter.ImpiegatiAdapter;
+import patterns.structural.adapter.target.objects.CalcolaStipendi;
+import patterns.structural.adapter.target.objects.Manager;
+import patterns.structural.adapter.target.objects.Sviluppatore;
 
 public class AdapterTest {
 
     public static void main(String[] args) {
-        Drawing drawing = new Drawing();
+        CalcolaStipendi calcolaStipendi = new CalcolaStipendi();
         //target objects
-        drawing.addShape(new Rectangle());
-        drawing.addShape(new Circle());
+        calcolaStipendi.aggiungiImpiegato(new Sviluppatore());
+        calcolaStipendi.aggiungiImpiegato(new Manager());
         //adaptee objects
-        drawing.addShape(new GeometricShapeObjectAdapter(new Triangle()));
-        drawing.addShape(new GeometricShapeObjectAdapter(new Rhombus()));
-
-        //they
-        drawing.draw();
-        drawing.resize();
+        calcolaStipendi.aggiungiImpiegato(new ImpiegatiAdapter(new ConsulenteManager("Project1")));
+        calcolaStipendi.aggiungiImpiegato(new ImpiegatiAdapter(new ConsulenteSviluppatore()));
+        
+        calcolaStipendi.calcola();
     }
 }

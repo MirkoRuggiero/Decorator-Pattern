@@ -1,16 +1,15 @@
 package patterns.structural.adapter.target;
 
-import patterns.structural.adapter.target.objects.Circle;
-import patterns.structural.adapter.target.objects.Drawing;
-import patterns.structural.adapter.target.objects.Rectangle;
+import patterns.structural.adapter.target.objects.Manager;
+import patterns.structural.adapter.target.objects.CalcolaStipendi;
+import patterns.structural.adapter.target.objects.Sviluppatore;
 
 public class Main {
     public static void main(String[] args) {
-        Drawing drawing = new Drawing();
-        drawing.addShape(new Rectangle());
-        drawing.addShape(new Circle());
+        CalcolaStipendi calcolaStipendi = new CalcolaStipendi();
+        calcolaStipendi.aggiungiImpiegato(new Sviluppatore());
+        calcolaStipendi.aggiungiImpiegato(new Manager());
 
-        drawing.draw();
-        drawing.resize();
+        calcolaStipendi.calcola();
     }
 }
