@@ -1,4 +1,4 @@
-package interfaces;
+package patterns.decorator.interfaces;
 
 /**
  * Basic interface for a car

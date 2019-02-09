@@ -1,6 +1,6 @@
-package decorator;
+package patterns.decorator.decorator;
 
-import interfaces.Car;
+import patterns.decorator.interfaces.Car;
 
 public class CarDecorator implements Car {
 

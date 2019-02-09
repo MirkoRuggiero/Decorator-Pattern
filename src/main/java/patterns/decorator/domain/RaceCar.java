@@ -1,7 +1,7 @@
-package domain;
+package patterns.decorator.domain;
 
-import decorator.CarDecorator;
-import interfaces.Car;
+import patterns.decorator.decorator.CarDecorator;
+import patterns.decorator.interfaces.Car;
 
 public class RaceCar extends CarDecorator {
 

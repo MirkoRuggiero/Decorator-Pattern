@@ -1,6 +1,6 @@
-package domain;
+package patterns.decorator.domain;
 
-import interfaces.Car;
+import patterns.decorator.interfaces.Car;
 
 public class SimpleCar implements Car {
 

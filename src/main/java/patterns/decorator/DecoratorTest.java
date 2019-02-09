@@ -1,7 +1,9 @@
-import domain.OffroadCar;
-import domain.RaceCar;
-import domain.SimpleCar;
-import interfaces.Car;
+package patterns.decorator;
+
+import patterns.decorator.domain.OffroadCar;
+import patterns.decorator.domain.RaceCar;
+import patterns.decorator.domain.SimpleCar;
+import patterns.decorator.interfaces.Car;
 
 public class DecoratorTest {
 
