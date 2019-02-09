@@ -1,4 +1,4 @@
-package patterns.singleton;
+package patterns.creational.singleton;
 
 import java.util.concurrent.ThreadLocalRandom;
 
